@@ -1,0 +1,265 @@
+<!--https://www.w3schools.com/tags/default.asp-->
+<!--TAGS BÁTICAS-->
+
+1 - Hierarquia de títulos
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+
+2 - Parágrafo
+<p></p>
+
+3 - Linha horizontal
+<hr>
+
+4 - Quebra de Linha
+<br>
+
+5 - Símbolos
+&lt;
+<!--Menor-->
+&gt;
+<!--Maior-->
+&reg;
+<!--Marca registrada-->
+&copy;
+<!--Copy right-->
+&trade;
+<!--Marca Regitrada-->
+<!--Moedas-->
+&euro;
+&dollar;
+&cent;
+&pound;
+&yen;
+<!--Outros-->
+&Delta;
+&uparrow;
+&downarrow;
+<!--Emojis-->
+<!--https://emojipedia.org/-->
+&#x1F596;
+&#x1F913;
+
+6 - Imagens/figuras/áudio/vídeo
+<img src="#" title="#" alt="#"> <!-- Tag para inserir imagens na página -->
+
+<picture>
+    <!-- Tag que permite colocar imagens de acordo com o tamanho da tela sem necessidade de usar várias classes -->
+    <source media="(min-width: )" srcset="">
+    <source media="(min-width: )" srcset="" type="image/">
+    <source media="(min-width: )" srcset="" sizes="">
+    <source sizes="" srcset="">
+    <source sizes="" srcset="" type="image/">
+    <source src="" type="">
+    <source srcset="">
+    <source srcset="" type="image/">
+    <img src="qualquerimagem.png" alt="Qualquer imagem">
+</picture>
+
+<audio src="meuaudio.mp3" controls autoplay loop></audio>
+<!--comandos controls (insere play, pause stop) comando autoplay (toca áudio automaticamente)-->
+<audio preload="metadata">
+    <!--Ou AUTO ou NONE-->
+    <source src="" type="">
+    <!--tipos aceitos MPEG WAV OGG-->
+</audio>
+
+<!--CONSOMEM MUITA LARGURA DE BANDA QUANDO SÃO HOSPEDADOS EM UM SERVIDOR EXTERNO-->
+<video poster="meuthumb.jpg" controls autoplay loop>
+    <!--Editar com o Handbreak-->
+    <!--comandos controls (insere play, pause stop) comando autoplay (toca áudio automaticamente)-->
+    <source src="meuvideo.m4v" type="video/m4v">
+    <source src="meuvideo.webm" type="video/webm">
+    <source src="meuvideo.mp4" type="video/mp4">
+    <source src="meuvideo.ogv" type="video/ogv">
+</video>
+
+<!--Inserção de vídeo do Youtube-->
+<!--EXEMPLO-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y" title="YouTube video player"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+
+<!--Inserção de vídeo do Vimeo-->
+<!--EXEMPLO-->
+<iframe src="https://player.vimeo.com/video/177118397?h=52d138b00e" width="560" height="239" frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+
+7 - Ícone de favorito
+<!--https://favicon.io/-->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+8 - Destaques de texto
+<b></b>
+<!--negrito (não semântico)-->
+<strong></strong>
+<!--destacar (semântico)-->
+<i></i>
+<!--itálico (não semântico)-->
+<em></em>
+<!--ênfase (semântico)-->
+<mark></mark>
+<!--marca texto (semântico)-->
+<big></big>
+<!--texto grande (obsoleto)-->
+<small></small>
+<!--texto pequeno (semântico)-->
+<del></del>
+<!--texto excluido (semântico)-->
+<ins></ins>
+<!--texto inserido(semântico)-->
+<u></u>
+<!--sublinhado (não semântico)-->
+<sup></sup>
+<!--subesscrito (semântico)-->
+<sub></sub>
+<!--subscrito (semântico)-->
+
+9 - Código-fonte
+<code></code>
+<!--aumento de espaço ocupado pelas letras-->
+
+10 - Listas
+<ol type="a"></ol>
+<!--Lista ordenada-->
+<ul type="square"></ul>
+<!--Lista não ordenada-->
+<li></li>
+<!--Item da lista-->
+<dt></dt>
+<!--Lista de definições (TERMO)-->
+<dd></dd>
+<!--Lista de definições (DIFINIÇÃO)-->
+
+11 - Links
+<a href=""></a>
+<!--Utilizar código abaixo para link para sites externos-->
+<a href="#" target="_blank" rel="external"></a>
+<!--Links externos-->
+<a href="#" target="_blank" rel="nofollow"></a>
+<!--Links externos-->
+<a href="#" target="_self" rel="prev"></a>
+<!--Links internos-->
+<a href="#" target="_self" rel="next"></a>
+<!--Links internos-->
+<!--Tipos de media - link abaixo-->
+<!--https://www.iana.org/assignments/media-types/media-types.xhtml-->
+
+12 - Divisões
+<div></div>
+<!--Muito utilizada para delimitar espaços na tela, podemos usar display, altura, largura, etc (BOX-LEVEL)-->
+<span></span>
+<!-- É um conteiner genérico em linha para conteúdo fraseado é muito parecido com o elemento <div> , entretando <div> é um elemento de nível de bloco enquanto <span> é um elemento em linha. (INLINE-LEVEL)-->
+
+13 - Grouping tags
+<body>
+    <header>
+        <!--Conteúdo do	header-->
+        <nav>
+            <!-- Tag seção de navegação utilizada para menus, NAV é uma tag diz que tudo que vem dentro dela são links-->
+            <ul>
+                <!--Representa uma lista de itens sem ordem rígida -->
+                <li>
+                    <!-- Usado para representar um item que faz parte de uma lista -->
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--	Conteúdo	principal	-->
+        <section>
+            <!-- Ajuda a separar o conteúdo da main em sessões tendo como base a altura da window -->
+            <article>
+                <!-- Representa uma composição independente em um documento -->
+                <aside>
+                    <!-- Está posicionado ao lado de um determinado texto ou até mesmo no meio deleo -->
+                </aside>
+            </article>
+        </section>
+        
+    </main>
+    <footer>
+        <!--	Conteúdo	do	footer	-->
+    </footer>
+</body>
+
+14 - Abreviações
+<abbr title=""></abbr><!--Utilizado para quando passamos o mouse por cima ela dá informção sobre o conteúdo-->
+
+
+
+
+
+
+
+
+<table>
+    <!-- É o elemento utilizado para contrução de tabelas-->
+    <thead>
+        <!--Esta tag tem como principais propriedades a de "negritar" o conteúdo das células, 
+                como também alinhar automaticamente os títulos das colunas no centro das células -->
+    </thead>
+    <tr>
+        <!-- É o elemento utilizado para indicar linha-->
+        <th>
+            <!-- É o elemento utilizado para indicar cabeçalho da tabela-->
+        </th>
+        <th>Cabeçalho</th>
+        <th>Outro cabeçalho</th>
+    </tr>
+    <tr>
+        <td>
+            <!-- É o elemento utilizado para indicar colunas-->
+        </td>
+        <td>linha 1, célula 1</td>
+        <td>linha 1, célula 2</td>
+    </tr>
+    <tr>
+        <td>linha 2, célula 1</td>
+        <td>linha 2, célula 2</td>
+    </tr>
+</table>
+<form action="">
+    <!--FORM é a tag utilizada para formulários onde o usuário insere informações-->
+    <label for="Nome">Nome</label>
+    <!--LABEL é a tag utilizada para mortar ao usurário que informação ele irá inserir nas caixas dos formulários-->
+    <input type="text" name="Nome" id="jl-nome">
+    <!--INPUT é a tag utilizada para identificar os campos que serão preenchidos nas caixas dos formulários-->
+    <input type="email">
+    <input type="button">
+    <input type="checkbox">
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <!--TEXTAREA é a tag utilizada para identificar um campo para texto grande, como comentários, etc-->
+
+</form>
+<!--Tag utilizada para chamada de uma função Javascript-->
+<script>
+            //O script é inserido sempre ao fim do body devido ao seu tempo para prcessamento
+</script>
+<!--Importar scripts dentro	da página utilizando também	a tag-->
+<script type="text/javasript" src="js/hello.js">
+            alert("Olá Mundo!");
+        </script>
+
+
+<!-- https://www.htmlprogressivo.net/2013/12/Formularios-em-HTML-O-que-sao-para-que-servem.html -->
+<form action="#" method="GET" method="POST">
+    <!-- Utilizado para fomulário com botões, onde uma ação atibuto Action sobre o botão gera uma consequencia-->
+</form>
+<!--https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/label-->
+<label for="">
+    <!--adicionar um Rótulo ao Formulário-->
+</label>
+<input type="text">
+<!-- É usado para criar controles interativos para formulários baseados na web para receber dados do usuário. -->
+
+<button>
+</button>
+
+
+</html>
