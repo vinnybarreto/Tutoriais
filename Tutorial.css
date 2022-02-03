@@ -235,6 +235,7 @@ box-shadow: 1px 1px 1px 1px black; /*Os valores são: Deslocamento horizontal, d
 }
 /*------*/
 
+
 /*--VARIÁVEIS--*/
 
 /*Declaração*/
@@ -253,6 +254,71 @@ box-shadow: 1px 1px 1px 1px black; /*Os valores são: Deslocamento horizontal, d
 }
 
 /*------*/
+
+
+/*--POSICIONAMENTO--*/
+
+/*https://medium.com/jaguaribetech/saiba-tudo-sobre-a-propriedade-position-30a7004daa6c*/
+.class{
+   /*A propriedade position é utilizada para manipular a localização e o comportamento de elementos em uma página ou em um container. 
+   Para que funcione temos que dizer em que posição o elemento estará top, bottom, left ou right*/
+   position: static; /*Valor padrão, Não é necessário declarar.*/
+   position: fixed; /*Já o valor fixed, é usado para fixar um elemento em determinada coordenada da página. Resultado, o elemento ficará 
+   fixo em sua coordenada determinada a medida em que o scroll é rolado.*/ 
+   position: sticky; /*Com o valor sticky, o elemento irá se comportar uma hora como position:relative(imagem da esquerda), em outra como 
+   position:fixed(imagem da direita).*/
+   position: relative; /*os elementos irão se posicionar de acordo com sua localização tendo como referência o body ou container*/
+   position: absolute; /*Com o valor absolute, você pode posicionar qualquer elemento de acordo com sua posição dentro do seu elemento 
+                        pai que tenha um valor position diferente de static. Se seus ancestrais tiverem um valor position:static, ele 
+                        irá se referenciar pelo body. Quando uma classe tem o position absolute podemos configurar ao posições: left, right
+                        top ou botom*/
+   
+}
+
+/*https://developer.mozilla.org/pt-BR/docs/Web/CSS/transform*/
+.class{
+   /*A Propriedade CSS transform permite modificar o espaço coordenado do modelo de formatação CSS. Usando-a, elementos podem ser 
+   traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos.*/
+   transform: translate(-50%, -50%); /*Faz o elemento se deslocar nos eixos X e Y*/
+   transform: translate3d(50%, 30%, 20%); /*Faz o elemento  se deslocar nos eixos X, Y e Z*/
+   transform: translateX();
+   transform: translateY();
+   transform: translateZ();
+   transform: rotate(10deg, 20deg); /*Faz o elemento  se deslocar nos eixos X e Y*/
+   transform: rotate3d(10deg, 20deg, 30deg); /*Faz o elemento  se deslocar nos eixos X, Y e Z*/
+   transform: rotateX();
+   transform: rotateY();
+   transform: rotateZ();
+   transform: scale(); /*Faz o elemento se estender (escalar) nos eixos X, Y e Z*/
+   transform: scaleX();
+   transform: scaleY();
+   transform: scaleZ();
+}
+
+/*Exemplo - Colocar elemento centralizado na vertical e na horizoltal*/
+
+.container{
+   position: relative;
+   height: 500px;
+   background-color: purple;
+   padding: 10px;
+}
+
+#conteudo{
+   position: absolute;
+   height: 200px;
+   width: 400px;
+   background-color: yellow;
+   top: 50%;
+   left: 50%;
+
+   transform: translate(-50%, -50%); 
+
+}
+
+/*------*/
+
+
 
 /*--RESPONSIVIDADE*/
 
@@ -375,43 +441,11 @@ com desktop, laptops, smartTvs, celulares, tablets*/
                      quando necessário.*/
    
 }
-/*POSICIONAMENTO*/
-/*https://medium.com/jaguaribetech/saiba-tudo-sobre-a-propriedade-position-30a7004daa6c*/
-.class{
-   /*A propriedade position é utilizada para manipular a localização e o comportamento de elementos em uma página ou em um container. 
-   Para que funcione temos que dizer em que posição o elemento estará top, bottom, left ou right*/
-   position: static; /*Valor padrão, Não é necessário declarar.*/
-   position: absolute; /*Com o valor absolute, você pode posicionar qualquer elemento de acordo com sua posição dentro do seu elemento 
-                        pai que tenha um valor position diferente de static. Se seus ancestrais tiverem um valor position:static, ele 
-                        irá se referenciar pelo body.*/
-   position: fixed; /*Já o valor fixed, é usado para fixar um elemento em determinada coordenada da página. Resultado, o elemento ficará 
-                     fixo em sua coordenada determinada a medida em que o scroll é rolado.*/ 
-   position: relative; /*os elementos irão se posicionar de acordo com sua localização tendo como referência o body ou container*/
-   position: sticky; /*Com o valor sticky, o elemento irá se comportar uma hora como position:relative(imagem da esquerda), em outra como 
-                     position:fixed(imagem da direita).*/
-}
 
 
 
-/*https://developer.mozilla.org/pt-BR/docs/Web/CSS/transform*/
-.class{
-   /*A Propriedade CSS transform permite modificar o espaço coordenado do modelo de formatação CSS. Usando-a, elementos podem ser 
-   traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos.*/
-   transform: translate(-50% -50%); /*Faz o elemento se deslocar nos eixos X e Y*/
-   transform: translate3d(50% 30% 20%); /*Faz o elemento  se deslocar nos eixos X, Y e Z*/
-   transform: translateX();
-   transform: translateY();
-   transform: translateZ();
-   transform: rotate(10deg 20deg); /*Faz o elemento  se deslocar nos eixos X e Y*/
-   transform: rotate3d(10deg 20deg 30deg); /*Faz o elemento  se deslocar nos eixos X, Y e Z*/
-   transform: rotateX();
-   transform: rotateY();
-   transform: rotateZ();
-   transform: scale(); /*Faz o elemento se estender (escalar) nos eixos X, Y e Z*/
-   transform: scaleX();
-   transform: scaleY();
-   transform: scaleZ();
-}
+
+
 
 /*GRID*/
 /*https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout*/
