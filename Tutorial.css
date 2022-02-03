@@ -84,12 +84,18 @@ body{
    background-image: linear-gradient(to right, white,blue);/*Para fazer gradientes de cores*/
    background-image: linear-gradient(to bottom,#4FFFDC 20%,#3FCCB0 40%,#3D8577);/*Pode-se colocar tb percentual das cores*/
    background-image: radial-gradient(to circle, #9198e2,#6d59c0,#e33f5f,#fdd579);/*Para fazer gradientes de cores*/
-   background-size: cover; /*Tamanho do fundo*/
-   background-position: top .6rem center; /*Posição do fundo*/
+   background-position: top .6rem center; /*Posição do fundo, o valor 0.6rem é a distância do objeto para os cantos da window*/
    background-repeat: no-repeat; /*Define a maneira como a imagem de fundo é posicionada*/
-   background-attachment: fixed; /*Define se a imagem de fundo "rola" ou não com a tela*/
+   background-size: cover; /*Tamanho do fundo*/ /*Valores: auto= padrão / contain= exibe 100%da imagem / cover= cobre a tela inteira, mais usado*/
+   background-attachment: fixed; /*Define se a imagem de fundo "rola" ou não com a tela, fixed (não rola) scroll (rola)*/
+
+    /*Shorthand Background*/
+   /*color -> image -> position -> repeat -> [size] -> attachment*/
+   background: #3D8577 url('/imagem/imagem-png') center center no-repeat fixed;
+   
    background-clip: border-box; /*Define a posição de origem da imagem no box*/
-   /*------*/
+
+  /*------*/
 
 }
 
@@ -156,12 +162,12 @@ body{
 
 /*--Dimensões--*/
 .class{
-height: 10px, 1rem, 2em, 10%; /* Controla a altura do elemento */
-min-height: 10px, 1rem, 2em, 10%; /* Controla a altura mínima que um elemento pode ter */ 
-max-height: 10px, 1rem, 2em, 10%; /* Controla a altura máxima que um elemento pode ter */
-width: 10px, 1rem, 2em, 10%; /* Controla a largura do elemento */ 
-min-width: 10px, 1rem, 2em, 10%;  /* Controla a largura mínima que um elemento pode ter */ 
-max-width: 10px, 1rem, 2em, 10%; /* Controla a largura máxima que um elemento pode ter */
+height: 10px, 1rem, 2em, 10%, 100vh; /* Controla a altura do elemento */
+min-height: 10px, 1rem, 2em, 10%, 100vh; /* Controla a altura mínima que um elemento pode ter */ 
+max-height: 10px, 1rem, 2em, 10%, 100vh; /* Controla a altura máxima que um elemento pode ter */
+width: 10px, 1rem, 2em, 10%, 100vh; /* Controla a largura do elemento */ 
+min-width: 10px, 1rem, 2em, 10%, 100vh;  /* Controla a largura mínima que um elemento pode ter */ 
+max-width: 10px, 1rem, 2em, 10%, 100vh; /* Controla a largura máxima que um elemento pode ter */
 
 /*Estilos de bordas*/
 border-color:	#61619b;
