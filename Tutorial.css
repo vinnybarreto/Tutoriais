@@ -295,7 +295,7 @@ box-shadow: 1px 1px 1px 1px black; /*Os valores são: Deslocamento horizontal, d
    transform: scaleZ();
 }
 
-/*Exemplo - Colocar elemento centralizado na vertical e na horizoltal*/
+/*Exemplo - Colocar elemento centralizado na vertical e na horizontal*/
 
 .container{
    position: relative;
