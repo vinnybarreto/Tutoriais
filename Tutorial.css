@@ -44,6 +44,8 @@ body{
 
     font-style: italic; /*Estilo da fonte*/
 
+    font-variant: small-caps; /*Similar ao UPPERCASE porém a primeira letra de cada palavra fica maior*/
+
    /*Shorthand font/*
    /*font-style -> font-weigth -> font-size -> font-family*/
    font: italic bolder 2em 'Work sans', sans-serif;
