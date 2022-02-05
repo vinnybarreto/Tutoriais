@@ -192,25 +192,15 @@
 <abbr title=""></abbr><!--Utilizado para quando passamos o mouse por cima ela dá informção sobre o conteúdo-->
 
 15 - Tabelas
-
-<table>
-    <!-- É o elemento utilizado para contrução de tabelas-->
-    <thead>
-        <!--Esta tag tem como principais propriedades a de "negritar" o conteúdo das células, 
-                como também alinhar automaticamente os títulos das colunas no centro das células -->
-    </thead>
-    <tr>
-        <!-- É o elemento utilizado para indicar linha-->
-        <th>
-            <!-- É o elemento utilizado para indicar cabeçalho da tabela-->
-        </th>
-        <th>Cabeçalho</th>
-        <th>Outro cabeçalho</th>
+<table><!-- É o elemento utilizado para contrução de tabelas-->
+    <th><!-- É o elemento utilizado para indicar cabeçalho da tabela-->
+    </th>
+    <th>Cabeçalho</th>
+    <tr><!-- É o elemento utilizado para indicar linha-->
+        <td> <!-- É o elemento utilizado para indicar dados-->
+        </td>
     </tr>
     <tr>
-        <td>
-            <!-- É o elemento utilizado para indicar colunas-->
-        </td>
         <td>linha 1, célula 1</td>
         <td>linha 1, célula 2</td>
     </tr>
@@ -218,7 +208,20 @@
         <td>linha 2, célula 1</td>
         <td>linha 2, célula 2</td>
     </tr>
+    <thead>
+        <!--Esta tag tem como principais propriedades a de "negritar" o conteúdo das células, 
+                como também alinhar automaticamente os títulos das colunas no centro das células -->
+    </thead>
 </table>
+
+
+
+
+
+
+
+
+
 <form action="">
     <!--FORM é a tag utilizada para formulários onde o usuário insere informações-->
     <label for="Nome">Nome</label>
