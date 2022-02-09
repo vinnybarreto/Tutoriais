@@ -320,13 +320,72 @@ box-shadow: 1px 1px 1px 1px black; /*Os valores são: Deslocamento horizontal, d
 
 /*------*/
 
-
-
 /*--RESPONSIVIDADE*/
 
 /*Em imagens, de uma forma bem simples podemos colocar width: 100%; para a mesma ficar responsiva tendo como base na TAG pai*/
 body{
   width: 100%; 
+}
+
+/*--VAZAMENTO ou TRANSBORDO--*/
+
+.my-container{
+   overflow: *visible, hidden, scroll, auto*; /* Controla o comportamento dos elementos internos que "vazam" do espaço definido pela tag mãe */ 
+   overflow-x: *visible, hidden, scroll, auto*; /* Controla o comportamento dos elementos internos q ue "vazam" do espaço horizontal definido pela tag mãe */ 
+   overflow-y: *visible, hidden, scroll, auto*; /* Controla o comportamento dos elementos internos q ue "vazam" do espaço vertial definido pela tag mãe */ 
+   
+   /*A propriedade overflow especifica quando o conteúdo de um elemento de nível de bloco deve ser cortado, exibido com barras de rolagem 
+   ou se transborda do elemento.*/
+   overflow: visible;/*Valor padrão. O conteúdo não é cortado e pode ser renderizado para fora da caixa de conteúdo*/
+   overflow: hidden;/*O conteúdo é cortado e nenhuma barra de rolagem é exibida.*/
+   overflow: scroll;/*O conteúdo é acessível através de barras de rolagem que são exibidas mesmo que o conteúdo não precise. Isso evita 
+                        o problema de barras de rolagem aparecendo e desaparecendo quando o conteúdo é dinâmico. Impressoras podem imprimir 
+                        o conteúdo vazado.*/
+   overflow: initial;/*Depende do navegador utilizado. Navegadores desktop como o Firefox geralmente exibem barras de rolagem apenas 
+                        quando necessário.*/
+         
+}
+
+/*------*/
+
+
+/*FLEXBOX*/
+.my-container{
+   /*Propriedade que habilita o Flexbox
+   https://css-tricks.com/snippets/css/a-guide-to-flexbox/#background*/
+   display: flex;
+}
+
+ .class{
+
+   flex-direction: row; /*Padrão, ordenação por linha*/
+   flex-direction: row-reverse; /*Ordenação por linha reversa*/
+   flex-direction: column; /*Ordenação por coluna*/
+   flex-direction: column-reverse; /*Ordenação por coluna reversa*/
+
+   /*justify-content: justify-content: Essa propriedade ajusta horizontalmente os elementos filhos	do	flex container*/
+   justify-content: flex-start;/*É o valor padrão. Os	elementos ficam grudados um do lado	do	outro	à esquerda do flex container*/
+   justify-content: flex-end;	/*Os elementos	ficam	grudados	um	do	lado do outro à direita	do	flex container.*/
+   justify-content: center; 	/*Os elementos	ficam	grudados	um	do	lado do outro no meio do flex container.*/
+   justify-content: space-between; /*O primeiro elemento fica totalmente à esquerda do flex container e o último fica totalmente 
+                                    à direita. O restante dos elementos ficam distribuídos com um espaçamento igual entre eles*/
+   justify-content: space-around; /* Cada elemento fica com um espaçamento igual em volta dele mesmo. Isso quer dizer que o primeiro 
+                                 elemento vai ter um espaçamento maior à direita do que à esquerda porque vai somar com o espaçamento 
+                                 à esquerda do segundo elemento.*/
+   justify-content: space-evenly; /*Corrige o "problema" do valor acima. Os elementos terão um espaçamento igual em ambos os lados.*/
+
+   /*align-items: Essa propriedade ajusta verticalmente os elementos filhos do flex container*/
+   align-items: stretch; /*É o valor padrão. Os elementos se "esticam" para que todos fiquem com a mesma altura.*/
+   align-items: flex-start; /*Os elementos ficam todos alinhados com o topo do flex container.*/
+   align-items: flex-end; /*Os elementos ficam todos alinhados com a base do flex container.*/
+   align-items: center; /*Os elementos ficam todos alinhados com o meio do flex container.*/
+   align-items: baseline; /*Os elementos ficam alinhados com base do conteúdo textual de cada um deles.*/
+
+   /*flex-wrap: Essa propriedade trabalha com a "quebra de linha" dos elementos em linha.*/
+   flex-wrap: nowrap; /*É o valor padrão. Os elementos vão ficar um do lado do outro mesmo que não exista mais espaço horizontal.*/
+   flex-wrap: wrap; /*Os elementos que não cabem mais no espaço lateral recebem uma quebra de linha, ou seja, vão para a linha debaixo.*/
+   flex-wrap: wrap-reverse; /*Os elementos que não cabem mais no espaço lateral recebem uma quebra de linha acima, 
+                           ou seja, vão para a linha de cima.*/
 }
 
 
@@ -342,14 +401,6 @@ body{
 
 
 
-body{
-
-    /*--VAZAMENTO--*/
-    overflow: *visible, hidden, scroll, auto*; /* Controla o comportamento dos elementos internos que "vazam" do espaço definido pela tag mãe */ 
-    overflow-x: *visible, hidden, scroll, auto*; /* Controla o comportamento dos elementos internos q ue "vazam" do espaço horizontal definido pela tag mãe */ 
-    overflow-y: *visible, hidden, scroll, auto*; /* Controla o comportamento dos elementos internos q ue "vazam" do espaço vertial definido pela tag mãe */ 
-   
-      
 
 
    display: flex;
@@ -400,50 +451,6 @@ com desktop, laptops, smartTvs, celulares, tablets*/
          color:	black;
       }
 }
-/*FLEXBOX*/
-.my-container{
-   /*Propriedade que habilita o Flexbox
-   https://css-tricks.com/snippets/css/a-guide-to-flexbox/#background*/
-   display: flex;
-
-   /*justify-content: justify-content: Essa propriedade ajusta horizontalmente os elementos filhos	do	flex container*/
-   justify-content: flex-start;/*É o valor padrão. Os	elementos ficam grudados um do lado	do	outro	à esquerda do flex container*/
-   justify-content: flex-end;	/*Os elementos	ficam	grudados	um	do	lado do outro à direita	do	flex container.*/
-   justify-content: center; 	/*Os elementos	ficam	grudados	um	do	lado do outro no meio do flex container.*/
-   justify-content: space-between; /*O primeiro elemento fica totalmente à esquerda do flex container e o último fica totalmente 
-                                    à direita. O restante dos elementos ficam distribuídos com um espaçamento igual entre eles*/
-   justify-content: space-around; /* Cada elemento fica com um espaçamento igual em volta dele mesmo. Isso quer dizer que o primeiro 
-                                 elemento vai ter um espaçamento maior à direita do que à esquerda porque vai somar com o espaçamento 
-                                 à esquerda do segundo elemento.*/
-   justify-content: space-evenly; /*Corrige o "problema" do valor acima. Os elementos terão um espaçamento igual em ambos os lados.*/
-
-   /*align-items: Essa propriedade ajusta verticalmente os elementos filhos do flex container*/
-   align-items: stretch; /*É o valor padrão. Os elementos se "esticam" para que todos fiquem com a mesma altura.*/
-   align-items: flex-start; /*Os elementos ficam todos alinhados com o topo do flex container.*/
-   align-items: flex-end; /*Os elementos ficam todos alinhados com a base do flex container.*/
-   align-items: center; /*Os elementos ficam todos alinhados com o meio do flex container.*/
-   align-items: baseline; /*Os elementos ficam alinhados com base do conteúdo textual de cada um deles.*/
-
-   /*flex-wrap: Essa propriedade trabalha com a "quebra de linha" dos elementos em linha.*/
-   flex-wrap: nowrap; /*É o valor padrão. Os elementos vão ficar um do lado do outro mesmo que não exista mais espaço horizontal.*/
-   flex-wrap: wrap; /*Os elementos que não cabem mais no espaço lateral recebem uma quebra de linha, ou seja, vão para a linha debaixo.*/
-   flex-wrap: wrap-reverse; /*Os elementos que não cabem mais no espaço lateral recebem uma quebra de linha acima, 
-                           ou seja, vão para a linha de cima.*/
-}
-/*TRANSBORDO*/
-.my-container{
-   /*A propriedade overflow especifica quando o conteúdo de um elemento de nível de bloco deve ser cortado, exibido com barras de rolagem 
-   ou se transborda do elemento.*/
-   overflow: visible;/*Valor padrão. O conteúdo não é cortado e pode ser renderizado para fora da caixa de conteúdo*/
-   overflow: hidden;/*O conteúdo é cortado e nenhuma barra de rolagem é exibida.*/
-   overflow: scroll;/*O conteúdo é acessível através de barras de rolagem que são exibidas mesmo que o conteúdo não precise. Isso evita 
-                     o problema de barras de rolagem aparecendo e desaparecendo quando o conteúdo é dinâmico. Impressoras podem imprimir 
-                     o conteúdo vazado.*/
-   overflow: initial;/*Depende do navegador utilizado. Navegadores desktop como o Firefox geralmente exibem barras de rolagem apenas 
-                     quando necessário.*/
-   
-}
-
 
 
 
