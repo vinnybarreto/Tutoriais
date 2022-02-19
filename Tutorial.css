@@ -89,6 +89,7 @@ body{
    background-position: top .6rem center; /*Posição do fundo, o valor 0.6rem é a distância do objeto para os cantos da window*/
    background-repeat: no-repeat; /*Define a maneira como a imagem de fundo é posicionada*/
    background-size: cover; /*Tamanho do fundo*/ /*Valores: auto= padrão / contain= exibe 100%da imagem / cover= cobre a tela inteira, mais usado*/
+   background-size: 2em 2em; /*Vai dividindo o tamanho conforme colocamos mais opções*/
    background-attachment: fixed; /*Define se a imagem de fundo "rola" ou não com a tela, fixed (não rola) scroll (rola)*/
 
     /*Shorthand Background*/
