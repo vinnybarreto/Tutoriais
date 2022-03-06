@@ -86,19 +86,19 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators
 
 Operadores Aritméticos
     (+) - Soma
-        (-) - Subtração
-        (*) - Multiplicação
-        (/) - Divisão
-            (%) - Resto da divisão inteira
-                (**) - Potência
+    (-) - Subtração
+    (*) - Multiplicação
+    (/) - Divisão
+    (%) - Resto da divisão inteira
+    (**) - Potência
 
 Precedencia dos operadores aritméticos
 1 - ()
 2 - **
-            3 - * ou / ou %
-            4 - + ou -
+3 - * ou / ou %
+4 - + ou -
 
-            Forma resumida de operação
+Forma resumida de operação
 var n = 3
 n += 4 é o mesmo que n = n + 4
 n -= 5 é o mesmo que n = n - 5
@@ -115,19 +115,19 @@ n-- (decrementa 1 a n, ou seja n vale 2)
 
 Operadores Relacionais
     (>) - Maior
-        (<) - Menor
-        (>=) - Maior ou igual
-            (<=) - Menor ou igual
-                (==) - Igual(não texta o tipo da variável)
-                    (===) - idêntico(texta também o tipo de variável)
-                    (!=) - Diferente(não texta o tipo da variável)
-                    (!=) - Desigual(texta também o tipo de variável)
+    (<) - Menor
+    (>=) - Maior ou igual
+    (<=) - Menor ou igual
+    (==) - Igual(não texta o tipo da variável)
+    (===) - idêntico(texta também o tipo de variável)
+    (!=) - Diferente(não texta o tipo da variável)
+    (!=) - Desigual(texta também o tipo de variável)
 
 
 Operadores Lógicos
     (!) - negação ou NÃO
-        (&&) - Conjuncão ou E
-            (||) - Dijunção ou OU
+    (&&) - Conjuncão ou E
+    (||) - Dijunção ou OU
 
 Precedencia de execução dos operadores lógicos
 1 - (!)
@@ -237,8 +237,8 @@ document.querySelector("#id") //Seleciona o id passado como parâmetro
 document.querySelector(".class") //Seleciona a classe passado como parâmetro
 
 document.querySelectorAll("tag") //Seleciona todas tags as passadas como parâmetro
-document.querySelectorAll(".class") //Seleciona todas os ids passadas como parâmetro
-document.querySelectorAll("#id") //Seleciona todas as classes passadas como parâmetro
+document.querySelectorAll("#id") //Seleciona todas os ids passadas como parâmetro
+document.querySelectorAll(".class") //Seleciona todas as classes passadas como parâmetro
 
 document.querySelectorAll(".cartao")[0]//Acessa aos elementos numa lista através da posição dele (começando em zero) e usando o colchetes
 
